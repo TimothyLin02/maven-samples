@@ -1,9 +1,5 @@
 pipeline {
   agent any
-  tools { 
-      maven 'MVN' 
-      jdk 'Java' 
-  }
   stages {
     stage('check out') {
       steps {
@@ -17,5 +13,9 @@ pipeline {
       }
     }
 
+  }
+  tools {
+    maven 'MVN'
+    jdk 'Java'
   }
 }
